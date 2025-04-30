@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Code, Layout, Monitor, Shield, Globe, Server, Cpu, Database, Search } from 'lucide-react';
+import { Code, Layout, Monitor, Shield, Globe, Server, Database } from 'lucide-react';
 import logo from './assets/2-logo GSAPP_2015.png';
 import image from './assets/adult-3086304_1920.jpg';
 import imag2 from './assets/people-2564459.jpg';
@@ -12,11 +12,6 @@ const ParallaxLandingPage = () => {
   const [headerScrolled, setHeaderScrolled] = useState(false);
 
   // Cores do logotipo da GSA Platform
-  const colors = {
-    purple: '#6A3DB3', // Roxo do logotipo
-    grey: '#999999',   // Cinza do logotipo
-    lightGrey: '#E5E5E5'
-  };
 
   // Efeito parallax - captura a posição do scroll com suavidade aprimorada
   useEffect(() => {
