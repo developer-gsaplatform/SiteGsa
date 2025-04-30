@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Code, Layout, Monitor, Shield, Globe, Server, Database } from 'lucide-react';
 import logo from './assets/2-logo GSAPP_2015.png';
 import image from './assets/adult-3086304_1920.jpg';
-import imag2 from './assets/people-2564459.jpg';
+
 
 // Este é o componente principal da landing page com efeito parallax para GSA Platform
 const ParallaxLandingPage = () => {
