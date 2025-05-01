@@ -91,7 +91,7 @@ const ParallaxLandingPage = () => {
             O NOSSO SITE SERÁ<br />LANÇADO BREVEMENTE
           </h1>
           <p className="text-xl text-white mb-10 max-w-2xl mx-auto drop-shadow-md">
-            Especialistas em desenvolvimento de plataformas web com objectivo de transformar o seu negócio digital e automatizado.          </p>
+          “Especialistas em desenvolvimento de plataformas web cujo o objectivo é o de transformar o seu negócio com apoio à digitalização e automatização dos seus processos.”         </p>
           <a
             href="#inscrever"
             className="mt-6 px-10 py-4 bg-purple-700 bg-opacity-80 hover:bg-opacity-100 border border-purple-400 text-white hover:bg-purple-700 transition-all duration-300 uppercase tracking-wider text-sm font-medium rounded-sm"
