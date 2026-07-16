@@ -2,6 +2,7 @@ import { memo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { EASE } from "../../../utils/responsiveCoverflow";
+import { useNavigate } from "react-router-dom";
 
 const CoverflowCard = memo(function CoverflowCard({
   item,
@@ -22,7 +23,7 @@ const CoverflowCard = memo(function CoverflowCard({
     labelY,
     isActive,
   } = layout;
-
+  const navigate= useNavigate();
   const dur = reducedMotion ? "0ms" : "550ms";
   const fadeDur = reducedMotion ? "0ms" : "480ms";
 
@@ -55,7 +56,7 @@ const CoverflowCard = memo(function CoverflowCard({
     >
       {/* ── Imagem ── */}
       <div
-        className="relative overflow-hidden border border-white"
+        className="relative overflow-hidden border-4 border-white"
         style={{
           height: cardHeight,
           border: isActive
@@ -99,9 +100,13 @@ const CoverflowCard = memo(function CoverflowCard({
         {/* Purple Overlay on Hover (only for active card) */}
         {isActive && (
           <div
-            className="absolute inset-0 bg-gradient-to-t from-[#3e1d63]/90 to-[#5e2d91]/75 backdrop-blur-xs flex items-center justify-center 
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/project/${item.slug}`)
+          }}
+            className="absolute inset-0 cursor-pointer bg-gradient-to-t from-[#3e1d63]/90 to-[#5e2d91]/75 backdrop-blur-xs flex items-center justify-center 
                        translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 
-                       transition-all duration-500 ease-out z-20"
+                       transition-all duration-500 ease-linear"
           >
             <Link
               to={`/project/${item.slug}`}

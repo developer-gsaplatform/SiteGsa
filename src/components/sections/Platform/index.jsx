@@ -91,7 +91,6 @@ export default function PlatformsCarousel() {
                 cardHeight={cardDims.height}
                 reducedMotion={reducedMotion}
                 onClick={() => !layout.isActive && goTo(i)}
-
               />
             );
           })}
