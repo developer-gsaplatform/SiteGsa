@@ -1,7 +1,195 @@
 @import "tailwindcss";
+:root {
+  --font-d: "Barlow Condensed", sans-serif;
+  --font-b: "Barlow Semi Condensed", sans-serif;
 
-.titleLogo {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  --: var(--font-d);
+  --font-semi: var(--font-b);
+}
+@theme {
+  --color-gsa-purple: #5e2d91;
+  --color-gsa-purple-deep: #3e1d63;
+  --color-gsa-purple-soft: #9b7bc4;
+  --color-gsa-gray-light: #d4d4d0;
+  --color-gsa-black: #0a0a0a;
+  --color-gsa-white: #f5f5f0;
+  --color-gsa-gray-1: #161122;
+  --color-gsa-gray-2: #2a2540;
+  --color-gsa-gray-3: #3d3858;
+  --color-gsa-gray-4: #5a5470;
+  --color-gsa-gray-5: #8a8499;
+  --color-gsa-gray-6: #a8a2b8;
+  --color-gsa-gray-7: #c8c2d8;
+  --gsa-nav-h: 68px;
+  --gsa-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --: var(--font-d), sans-serif;
+  --font-semi: var(--font-b), sans-serif;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
+
+  body {
+    font-family: var(--font-b), sans-serif;
+    background-color: #0a0a0a;
+    color: #f5f5f0;
+    line-height: 1.65;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(
+        ellipse at 15% 0%,
+        rgba(94, 45, 145, 0.2) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse at 85% 100%,
+        rgba(62, 29, 99, 0.25) 0%,
+        transparent 60%
+      );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-d), sans-serif;
+    line-height: 1.1;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+@keyframes msgIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes moonGlow {
+  0% {
+    opacity: 0.6;
+    filter: blur(3rem);
+  }
+  50% {
+    opacity: 0.9;
+    filter: blur(2rem);
+  }
+  100% {
+    opacity: 0.6;
+    filter: blur(3rem);
+  }
+}
+
+.animate-gsa-blink {
+  animation: blink 1.4s infinite;
+}
+.animate-gsa-msg {
+  animation: msgIn 0.2s ease forwards;
+}
+.animate-gsa-typing {
+  animation: typing 0.8s infinite;
+}
+.animate-moon-glow {
+  animation: moonGlow 4s ease-in-out infinite;
+}
+
+@keyframes breatheGlowStrong {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes verticalPulseStrong {
+  0% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateX(-50%) scaleY(1.25);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scaleY(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes gridlinePulse {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  30%,
+  70% {
+    opacity: 1;
+  }
+}
+
+/* Adiciona ao @theme do teu globals.css, junto dos outros keyframes GSA */
+
+@keyframes gsa-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* E no bloco de utilities/keyframes do Tailwind v4: */
+/* animation: gsa-ticker 24s linear infinite; */
+
+/* ─── Classe utilitária (se usares @layer utilities) ─── */
+@layer utilities {
+  .animate-gsa-ticker {
+    animation: gsa-ticker 24s linear infinite;
+  }
+}
+
+/* Forçar cantos retos (sem bordas arredondadas) em todo o layout */
+*, *::before, *::after {
+  border-radius: 0px !important;
+}
