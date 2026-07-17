@@ -1,5 +1,6 @@
+import { useMemo } from "react";
 import { motion } from "framer-motion";
-import { contactData } from "./../../../config/contact";
+import { useTranslation } from "react-i18next";
 import ScrollReveal from "./../../common/ScrollReveal";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
@@ -7,6 +8,17 @@ import HeadSection from "./../../ui/HeadSection";
 import ContactMap from "./ContactMap";
 
 export default function Contactos() {
+  const { t } = useTranslation();
+
+  const contactData = useMemo(
+    () => ({
+      label: t("contact.label"),
+      title: t("contact.title"),
+      desc: t("contact.desc"),
+    }),
+    [t],
+  );
+
   return (
     <section
       id="contactos"

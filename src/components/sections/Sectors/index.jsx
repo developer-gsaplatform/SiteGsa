@@ -1,13 +1,23 @@
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import {
-  sectors,
-  itemVariants,
-  containerVariants,
-} from "./../../../config/sectors";
+import { itemVariants, containerVariants } from "./../../../config/sectors";
 import ScrollReveal from "./../../common/ScrollReveal";
 import HeadSection from "./../../ui/HeadSection";
 import CardSectors from "./CardSectors";
 export default function Sectors() {
+  const { t } = useTranslation();
+
+  const sectors = useMemo(
+    () => ({
+      label: t("sectors.label"),
+      title: t("sectors.title"),
+      sub: t("sectors.sub"),
+      desc: t("sectors.desc"),
+      items: t("sectors.items", { returnObjects: true }),
+    }),
+    [t],
+  );
   return (
     <section
       id="sectores"

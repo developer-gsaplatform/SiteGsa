@@ -1,12 +1,45 @@
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
-import { contactSchema, INTERESTS } from "./../../../config/contact";
 import { Input, Textarea, Select } from "./../../common/FormField";
 import Button from "./../../ui/Button";
 
 export default function ContactForm() {
+  const { t } = useTranslation();
+  const contactSchema = useMemo(
+    () =>
+      z.object({
+        name: z
+          .string()
+          .min(1, t("contact.validation.nameRequired"))
+          .min(3, t("contact.validation.nameMin")),
+        email: z
+          .string()
+          .min(1, t("contact.validation.emailRequired"))
+          .email(t("contact.validation.emailInvalid")),
+        phone: z
+          .string()
+          .min(1, t("contact.validation.phoneRequired"))
+          .regex(/^[\d\s\-\+\(\)]+$/, t("contact.validation.phoneInvalid"))
+          .min(9, t("contact.validation.phoneMin")),
+        topic: z.string().min(1, t("contact.validation.topicRequired")),
+        message: z
+          .string()
+          .min(1, t("contact.validation.messageRequired"))
+          .min(10, t("contact.validation.messageMin")),
+      }),
+    [t],
+  );
+
+  const interests = useMemo(() => {
+    const values = t("contact.interests", { returnObjects: true });
+    return Array.isArray(values) ? values : [];
+  }, [t]);
+
   const {
     register,
     handleSubmit,
@@ -24,7 +57,7 @@ export default function ContactForm() {
   });
 
   async function onSubmit(values) {
-    const toastId = toast.loading("A preparar o seu e-mail...");
+    const toastId = toast.loading(t("contact.toasts.preparing"));
     try {
       const emailRecipient = "edson.2m.caolo@gmail.com";
       const subjectText = `[GSA Platform] - ${values.topic}`;
@@ -45,16 +78,13 @@ export default function ContactForm() {
 
       window.location.assign(mailtoUrl);
 
-      toast.success(
-        "E-mail preparado! Por favor, envie a mensagem na sua aplicação de e-mail.",
-        {
-          id: toastId,
-          duration: 5000,
-        },
-      );
+      toast.success(t("contact.toasts.success"), {
+        id: toastId,
+        duration: 5000,
+      });
       reset();
     } catch {
-      toast.error("Erro ao processar o formulário. Tente novamente.", {
+      toast.error(t("contact.toasts.error"), {
         id: toastId,
       });
     }
@@ -74,18 +104,18 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Input
           id="name"
-          label="Nome completo"
+          label={t("contact.form.name")}
           type="text"
-          placeholder="O seu nome"
+          placeholder={t("contact.form.namePlaceholder")}
           required
           error={errors.name?.message}
           {...register("name")}
         />
         <Input
           id="email"
-          label="E-mail"
+          label={t("contact.form.email")}
           type="email"
-          placeholder="email@empresa.ao"
+          placeholder={t("contact.form.emailPlaceholder")}
           required
           error={errors.email?.message}
           {...register("email")}
@@ -95,17 +125,18 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <Input
           id="phone"
-          label="Telefone"
+          label={t("contact.form.phone")}
           type="tel"
-          placeholder="+244 ___ ___ ___"
+          placeholder={t("contact.form.phonePlaceholder")}
           required
           error={errors.phone?.message}
           {...register("phone")}
         />
         <Select
           id="topic"
-          label="Interesse"
-          options={INTERESTS}
+          label={t("contact.form.topic")}
+          placeholder={t("contact.form.selectPlaceholder")}
+          options={interests}
           required
           error={errors.topic?.message}
           {...register("topic")}
@@ -114,8 +145,8 @@ export default function ContactForm() {
 
       <Textarea
         id="message"
-        label="Mensagem"
-        placeholder="Conte-nos sobre o seu projecto"
+        label={t("contact.form.message")}
+        placeholder={t("contact.form.messagePlaceholder")}
         required
         rows={5}
         error={errors.message?.message}
@@ -123,7 +154,7 @@ export default function ContactForm() {
       />
 
       <Button type="submit" loading={isSubmitting}>
-        Enviar Mensagem
+        {t("contact.form.submit")}
       </Button>
     </motion.form>
   );

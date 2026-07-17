@@ -1,4 +1,5 @@
 import { memo } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { EASE } from "../../../utils/responsiveCoverflow";
@@ -23,7 +24,8 @@ const CoverflowCard = memo(function CoverflowCard({
     labelY,
     isActive,
   } = layout;
-  const navigate= useNavigate();
+  const { t } = useTranslation();
+  const navigate = useNavigate();
   const dur = reducedMotion ? "0ms" : "550ms";
   const fadeDur = reducedMotion ? "0ms" : "480ms";
 
@@ -31,7 +33,11 @@ const CoverflowCard = memo(function CoverflowCard({
     <div
       onClick={onClick}
       role={isActive ? "group" : "button"}
-      aria-label={isActive ? undefined : `Navegar para ${item.title}`}
+      aria-label={
+        isActive
+          ? undefined
+          : t("platforms.carousel.goToLabel", { title: item.title })
+      }
       tabIndex={isActive ? -1 : 0}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -100,10 +106,10 @@ const CoverflowCard = memo(function CoverflowCard({
         {/* Purple Overlay on Hover (only for active card) */}
         {isActive && (
           <div
-          onClick={(e) => {
-            e.stopPropagation();
-            navigate(`/project/${item.slug}`)
-          }}
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/project/${item.slug}`);
+            }}
             className="absolute inset-0 cursor-pointer bg-gradient-to-t from-[#3e1d63]/90 to-[#5e2d91]/75 backdrop-blur-xs flex items-center justify-center 
                        translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 
                        transition-all duration-500 ease-linear"
@@ -120,7 +126,9 @@ const CoverflowCard = memo(function CoverflowCard({
                 e.stopPropagation();
               }}
             >
-              <span className="relative z-10">Ver Plataforma</span>
+              <span className="relative z-10">
+                {t("projects.visitPlatform")}
+              </span>
               <ArrowUpRight
                 size={13}
                 strokeWidth={1.5}

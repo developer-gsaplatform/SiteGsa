@@ -1,12 +1,19 @@
-export default function MainContent({id, tag, whatDo, desc}) {
+import { useTranslation } from "react-i18next";
+
+export default function MainContent({ id, tag, whatDo, desc }) {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="max-w-5xl mx-auto px-6 md:px-16 w-[95%]">
         <div className="grid grid-cols-3 border-b border-gsa-white/30 py-10">
           {[
-            { label: "Sector", value: tag || "Plataforma" },
-            { label: "Projecto", value: `GSA ${id}` },
-            { label: "Alcance", value: "Nacional" },
+            {
+              label: t("projects.sector"),
+              value: tag || t("projects.platform"),
+            },
+            { label: t("projects.project"), value: `GSA ${id}` },
+            { label: t("projects.scope"), value: t("projects.national") },
           ].map((item, i) => (
             <div
               key={i}
@@ -31,7 +38,7 @@ export default function MainContent({id, tag, whatDo, desc}) {
           </span>
           <div>
             <span className=" text-[10px] tracking-[0.5em] uppercase text-gsa-purple-soft block mb-2">
-              Visão Geral
+              {t("projects.overview")}
             </span>
             <p className="text-gsa-gray text-[15px] leading-[1.9] font-light text-justify">
               {desc}
@@ -40,7 +47,7 @@ export default function MainContent({id, tag, whatDo, desc}) {
             {whatDo && (
               <div className="mt-8 pt-8 border-t border-gsa-white/10">
                 <span className="text-[10px] tracking-[0.5em] uppercase text-gsa-purple-soft block mb-3">
-                  O Que Faz
+                  {t("projects.whatItDoes")}
                 </span>
                 <p className="text-gsa-gray text-[14px] leading-[1.85] text-justify">
                   {whatDo}

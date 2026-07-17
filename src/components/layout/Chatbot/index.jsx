@@ -1,8 +1,10 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { X, Bot, Send, Trash2 } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { fluxosDeResposta } from "./../../../config/chatbot";
 
 export default function AssistenteGSA() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [hasNotification, setHasNotification] = useState(true);
   const [messages, setMessages] = useState([]);
@@ -16,18 +18,20 @@ export default function AssistenteGSA() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
+  const welcomeMessage = useMemo(() => t("chatbot.welcomeMessage"), [t]);
+
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       setTimeout(() => {
         setMessages([
           {
-            text: "Olá. Sou o Assistente GSA da GSAPLATFORM. Em que posso ajudar?",
+            text: welcomeMessage,
             sender: "bot",
           },
         ]);
       }, 300);
     }
-  }, [isOpen, messages.length]);
+  }, [isOpen, messages.length, welcomeMessage]);
 
   const getBotResponse = (msg) => {
     const normalizarTexto = (texto) => {
@@ -48,7 +52,7 @@ export default function AssistenteGSA() {
       }
     }
 
-    return "Obrigado pela mensagem. Um consultor responderá brevemente. Pode também escrever para info@gsaplatform.ao.";
+    return t("chatbot.defaultResponse");
   };
 
   const handleSend = (text) => {
@@ -70,7 +74,7 @@ export default function AssistenteGSA() {
   const limparConversa = () => {
     setMessages([
       {
-        text: "Olá. Sou o Assistente GSA da GSAPLATFORM. Em que posso ajudar?",
+        text: welcomeMessage,
         sender: "bot",
       },
     ]);
@@ -115,11 +119,11 @@ export default function AssistenteGSA() {
             </div>
             <div>
               <h4 className="text-[0.9rem] font-extrabold m-0  uppercase tracking-[0.04em] text-[#f5f5f0]">
-                Assistente GSA
+                {t("chatbot.headerTitle")}
               </h4>
               <div className="text-[0.7rem] text-[#9B7BC4] flex items-center gap-1.25">
                 <span className="w-1.25 h-1.25 bg-[#9B7BC4] inline-block animate-pulse rounded-full" />
-                Online · Resposta imediata
+                {t("chatbot.headerStatus")}
               </div>
             </div>
           </div>
@@ -179,17 +183,15 @@ export default function AssistenteGSA() {
 
         {showChips && (
           <div className="flex flex-wrap gap-1.25 p-[10px_14px] border-t border-dashed border-gsa-gray-2">
-            {["Plataformas", "Serviços", "Estágios-Pro", "Contactar"].map(
-              (chip) => (
-                <button
-                  key={chip}
-                  onClick={() => handleSend(chip)}
-                  className="bg-[rgba(22,17,34,0.5)] border border-dashed border-[#3d3858] text-[#a8a2b8] text-[0.74rem] p-[5px_10px] cursor-pointer transition-all duration-200 whitespace-nowrap hover:border-[#9B7BC4] hover:text-[#f5f5f0]"
-                >
-                  {chip}
-                </button>
-              ),
-            )}
+            {t("chatbot.quickChips", { returnObjects: true }).map((chip) => (
+              <button
+                key={chip}
+                onClick={() => handleSend(chip)}
+                className="bg-[rgba(22,17,34,0.5)] border border-dashed border-[#3d3858] text-[#a8a2b8] text-[0.74rem] p-[5px_10px] cursor-pointer transition-all duration-200 whitespace-nowrap hover:border-[#9B7BC4] hover:text-[#f5f5f0]"
+              >
+                {chip}
+              </button>
+            ))}
           </div>
         )}
 
@@ -204,7 +206,7 @@ export default function AssistenteGSA() {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Escreva a sua mensagem..."
+            placeholder={t("chatbot.inputPlaceholder")}
             className="flex-1 p-[13px_16px] bg-transparent border-none text-[#f5f5f0] text-[0.88rem] outline-none placeholder:text-[#5a5470]"
           />
           <button

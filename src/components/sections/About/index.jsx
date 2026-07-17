@@ -1,10 +1,23 @@
-import { aboutData } from "./../../../config/about";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import ScrollReveal from "./../../common/ScrollReveal";
 import AboutHead from "./AboutHead";
 import Mission from "./Mission";
 import AboutPoints from "./AboutPoints";
 
 export default function About() {
+  const { t } = useTranslation();
+
+  const aboutData = useMemo(
+    () => ({
+      title: t("about.title"),
+      description: t("about.description"),
+      features: t("about.features", { returnObjects: true }),
+      pillars: t("about.pillars", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   return (
     <section
       id="sobre"

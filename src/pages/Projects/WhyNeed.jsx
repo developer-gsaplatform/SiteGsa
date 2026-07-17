@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function WhyNeed({ whyNeed }) {
+  const { t } = useTranslation();
   return (
     <div className="px-[5%] md:px-0 max-w-4xl mx-auto py-14">
       <div className="flex items-center gap-3 mb-4">
@@ -7,7 +10,7 @@ export default function WhyNeed({ whyNeed }) {
           style={{ transform: "rotate(45deg)" }}
         />
         <span className="text-[12px] tracking-[0.2em] uppercase text-gsa-gray">
-          Porque Precisa
+          {t("projects.whyNeedTitle")}
         </span>
       </div>
 
@@ -16,9 +19,7 @@ export default function WhyNeed({ whyNeed }) {
           <div
             key={idx}
             className={`group bg-gsa-black py-6 transition-all duration-300 ${
-              idx % 2 === 1
-                ? "md:pl-8" 
-                : "md:pr-8"
+              idx % 2 === 1 ? "md:pl-8" : "md:pr-8"
             }`}
           >
             <h4 className="text-sm font-bold tracking-wider uppercase text-gsa-white mb-2 group-hover:text-gsa-purple-soft/90 transition-colors duration-300">

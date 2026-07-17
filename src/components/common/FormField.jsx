@@ -76,6 +76,12 @@ export const Select = memo(
     },
     ref,
   ) {
+    const normalizedOptions = Array.isArray(options)
+      ? options
+      : typeof options === "string"
+        ? [options]
+        : [];
+
     return (
       <FieldWrapper
         label={label}
@@ -90,15 +96,26 @@ export const Select = memo(
             {...props}
           >
             <option value="">{placeholder}</option>
-            {options.map((opt) => (
-              <option
-                key={opt}
-                value={opt}
-                className="bg-[#0a0a0a] text-[#f5f5f0]"
-              >
-                {opt}
-              </option>
-            ))}
+            {normalizedOptions.map((opt, index) => {
+              const optionValue =
+                typeof opt === "string"
+                  ? opt
+                  : (opt?.value ?? opt?.label ?? "");
+              const optionLabel =
+                typeof opt === "string"
+                  ? opt
+                  : (opt?.label ?? opt?.value ?? "");
+
+              return (
+                <option
+                  key={`${optionValue}-${index}`}
+                  value={optionValue}
+                  className="bg-[#0a0a0a] text-[#f5f5f0]"
+                >
+                  {optionLabel}
+                </option>
+              );
+            })}
           </select>
           {/* Chevron decorativo */}
           <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-[#9B7BC4]">

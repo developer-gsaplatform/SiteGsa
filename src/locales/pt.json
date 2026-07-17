@@ -1,0 +1,835 @@
+{
+  "navigation": {
+    "inicio": "GSAPLATFORM",
+    "sobre": "Sobre",
+    "plataformas": "Plataformas",
+    "servicos": "Serviços",
+    "eventos": "Eventos",
+    "estagios": "Estágios",
+    "parceiros": "Parceiros",
+    "contactos": "Contactos"
+  },
+  "hero": {
+    "badge": "Luanda, Angola — Engenharia 100% Angolana",
+    "titleStart": "Plataformas que",
+    "titleItalic": "Transformam",
+    "titleEnd": "Instituições.",
+    "description": "Desenhamos, desenvolvemos e operamos plataformas para a banca, mineração, saúde, logística, segurança pública e administração. Tecnologia feita em Angola, com padrões internacionais de segurança e fiabilidade.",
+    "ctaPrimary": "Ver Plataformas",
+    "ctaGhost": "Falar com a Equipa",
+    "trustItems": [
+      "9 plataformas próprias em produção",
+      "Equipa de Engenheiros Angolanos",
+      "Suporte humano + automação, 24/7"
+    ]
+  },
+  "about": {
+    "badge": "// SOBRE A GSAPLATFORM //",
+    "title": "ENGENHARIA ANGOLANA COM PADRÕES INTERNACIONAIS",
+    "description": "Somos uma equipa de engenheiros angolanos que constrói e mantém plataformas onde uma falha tem custo real — em banca, finanças, minas, hospitais, administração pública, Oil e Gás, Educação, Sector Marítimo, Logística, Património, Legal e Jurídico. O nosso trabalho não é vender tecnologia; é garantir que a tua actividade funcione.",
+    "features": [
+      {
+        "id": "01",
+        "title": "PLATAFORMAS PRÓPRIAS",
+        "text": "+ 9 plataformas verticais já em produção, prontas a adaptar ao contexto de cada instituição."
+      },
+      {
+        "id": "02",
+        "title": "Suporte que responde",
+        "text": "Cada projeto tem equipa dedicada e automação por bots, para resolver antes que o problema cresça."
+      },
+      {
+        "id": "03",
+        "title": "Dados em solo nacional",
+        "text": "Talento angolano, dados alojados no país e governança alinhada com normas internacionais."
+      }
+    ],
+    "pillars": [
+      {
+        "title": "MISSÃO",
+        "text": "Construir software fiável que ajude as instituições angolanas e da CPLP a trabalhar melhor, com engenharia de qualidade e suporte próximo."
+      },
+      {
+        "title": "VISÃO",
+        "text": "Ser a escolha de confiança em Angola para plataformas de sectores críticos — financeiro, mineiro, saúde e administração pública."
+      },
+      {
+        "title": "VALORES",
+        "text": "Rigor técnico, honestidade, melhoria contínua, disponibilidade e impacto real para o país."
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "total": 9,
+      "label": "Plataformas Próprias"
+    },
+    {
+      "total": 8,
+      "label": "Sectores Servidos"
+    },
+    {
+      "percentage": 99.9,
+      "label": "Uptime Garantido"
+    },
+    {
+      "availability": "24/7",
+      "label": "Suporte Humano + Bots"
+    }
+  ],
+  "services": {
+    "label": "O QUE FAZEMOS",
+    "title": "Soluções que ",
+    "sub": "transformam o seu negócio",
+    "items": [
+      {
+        "id": "srv-1",
+        "num": "SRV — 01",
+        "title": "Arquitetura & Engenharia de Software",
+        "desc": "Construímos sistemas pensados para crescer e não parar: arquitetura em nuvem, microsserviços e aplicações web rápidas e estáveis.",
+        "tags": ["CLOUD", "MICROSSERVIÇOS", "PWA"],
+        "image": "/engenharia.jpg",
+        "alt": "Em prol do turismo: fendas da Tundavala"
+      },
+      {
+        "id": "srv-2",
+        "num": "SRV — 02",
+        "title": "Gestão & Engenharia de Dados",
+        "desc": "Os seus dados estão espalhados e pouco usados. Organizamos, ligamos e tratamos essa informação para apoiar decisões — data lakes, pipelines ETL e governança.",
+        "tags": ["DATA", "GOVERNANÇA"],
+        "image": "/kedas-de-kalanfula.jpg",
+        "alt": "Em prol do turismo: quedas de Kalandula"
+      },
+      {
+        "id": "srv-3",
+        "num": "SRV — 03",
+        "title": "Suporte, Manutenção & SLAs Críticos",
+        "desc": "Vigiamos os sistemas em tempo real e resolvemos incidentes 24/7/365, com níveis de serviço (SLA) acordados e cumpridos.",
+        "tags": ["24/7", "SLA", "MANUTENÇÃO"],
+        "image": "/maravilha2.jpg",
+        "alt": "Em prol do turismo: Maravilha natural"
+      },
+      {
+        "id": "srv-4",
+        "num": "SRV — 04",
+        "title": "Cibersegurança",
+        "desc": "Protegemos infraestruturas críticas com camadas de segurança, testes de intrusão e monitorização contínua de ameaças. Com suporte à AI temos recursos inovadores para a sua segurança contínua.",
+        "tags": ["SECURITY", "PEN-TEST", "DEFESA"],
+        "image": "/serra.jpg",
+        "alt": "Em prol do turismo: Serra da Leba"
+      },
+      {
+        "id": "srv-5",
+        "num": "SRV — 05",
+        "title": "Transformação Digital",
+        "desc": "Modernizamos processos antigos passo a passo, sem parar a operação, para ganhar eficiência e reduzir custos.",
+        "tags": ["STRATEGY", "LEGA-MOD", "DIGITAL"],
+        "image": "/luanda.jpg",
+        "alt": "Em prol do turismo: Baía de Luanda"
+      }
+    ],
+    "engineeringServices": [
+      {
+        "id": "eng-1",
+        "title": "Engenharia de Dados",
+        "desc": "Data lakes, pipelines, governança e modelagem avançada. Transformamos os seus dados brutos em ativos estratégicos de alto valor comercial."
+      },
+      {
+        "id": "eng-2",
+        "title": "Engenharia de Software",
+        "desc": "Sistemas nativos na nuvem, microsserviços de alta disponibilidade, auditorias de segurança de código e aplicações web progressivas de alto rendimento."
+      },
+      {
+        "id": "eng-3",
+        "title": "Cibersegurança",
+        "desc": "Implementação de camadas de segurança robustas, testes de penetração e monitorização constante contra ameaças cibernéticas em infraestruturas críticas."
+      }
+    ]
+  },
+  "sectors": {
+    "title": "Onde já trabalhámos.",
+    "label": "Projetos em sectores críticos",
+    "desc": "Implementações em instituições onde disponibilidade, segurança e conformidade não são opcionais",
+    "items": [
+      { "id": 1, "title": "Banca e Instituições Financeiras" },
+      { "id": 2, "title": "Sector Mineiro" },
+      { "id": 3, "title": "Agências Reguladoras" },
+      { "id": 4, "title": "Sector de Ensino" },
+      { "id": 5, "title": "Logística e Património" },
+      { "id": 6, "title": "Operações Portuárias" },
+      { "id": 7, "title": "Segurança Pública" },
+      { "id": 8, "title": "Previdência e Fundos de Pensões" }
+    ]
+  },
+  "testimonials": {
+    "label": "O que dizem de nós",
+    "title": "Confiança ganha em projecto real",
+    "items": [
+      {
+        "id": 1,
+        "text": "«A plataforma de Procurement reduziu em 60% o tempo do nosso ciclo de compras. Equipa técnica de primeira, sempre disponível.»",
+        "name": "J. Manuel",
+        "initials": "JM",
+        "role": "Director de Operações · Sector Mineiro",
+        "logoText": "MINING CORP"
+      },
+      {
+        "id": 2,
+        "text": "«A Plataforma Documental transformou completamente a nossa governança. O suporte humanizado faz toda a diferença.»",
+        "name": "M. Silva",
+        "initials": "MS",
+        "role": "CIO · Instituição Bancária",
+        "logoText": "SILVA BANK"
+      },
+      {
+        "id": 3,
+        "text": "«Engenharia angolana ao nível dos melhores. Integraram com o nosso sistema legado em tempo recorde.»",
+        "name": "A. Cabral",
+        "initials": "AC",
+        "role": "Coordenador TI · Agência Reguladora",
+        "logoText": "TI REGULATOR"
+      }
+    ]
+  },
+  "partners": {
+    "label": "Parcerias",
+    "title": "Nossos Parceiros",
+    "desc": "Trabalhamos com parceiros que partilham a nossa exigência de qualidade.",
+    "list": [
+      { "id": 1, "name": "AkiMoney-5Linhas", "tag": "Fintech & Telecom" },
+      { "id": 2, "name": "Multitel", "tag": "Infra-estrutura & Cloud" },
+      { "id": 3, "name": "Royal Empire", "tag": "Agricultura & Inovação" },
+      { "id": 4, "name": "PIPE AGRO", "tag": "Agricultura" },
+      { "id": 5, "name": "KOMBANGE", "tag": "Infra-estrutura & Cloud" }
+    ]
+  },
+  "events": {
+    "label": "Agenda",
+    "title": "Eventos e encontros técnicos",
+    "items": [
+      {
+        "id": 1,
+        "date": "15 JUL",
+        "title": "GSA Tech Day Luanda",
+        "desc": "Dia inteiro de demonstrações ao vivo das 9 plataformas, com casos reais de clientes nos sectores bancário e mineiro.",
+        "meta": ["Luanda", "Presencial", "Gratuito"]
+      },
+      {
+        "id": 2,
+        "date": "22 AGO",
+        "title": "Workshop Compliance & Contratos",
+        "desc": "Sessão técnica sobre o ciclo de vida de contratos digitais e automação de compliance regulatório em Angola.",
+        "meta": ["Online", "2h", "Inscrição"]
+      },
+      {
+        "id": 3,
+        "date": "10 SET",
+        "title": "Estágios-Pro · Open Day",
+        "desc": "Apresentação do programa Estágios-Pro a estudantes de Engenharia Informática e áreas afins.",
+        "meta": ["Luanda", "Presencial", "Gratuito"]
+      }
+    ]
+  },
+  "estagios": {
+    "label": "Programa Estágios-Pro",
+    "title": "Forme-se com quem constrói",
+    "desc": "Programa de estágio profissional dirigido a jovens engenheiros angolanos, com mentoria, bolsa e caminho directo para integração na equipa.",
+    "banner": {
+      "title": "Porquê o Estágios-Pro?",
+      "desc": "Construa um portefólio real em plataformas de missão crítica, com mentoria 1:1 de engenheiros seniores e bolsa mensal garantida.",
+      "buttonText": "Candidatar-me"
+    },
+    "perks": [
+      {
+        "id": 1,
+        "title": "Bolsa mensal",
+        "desc": "Suporte financeiro durante todo o programa."
+      },
+      {
+        "id": 2,
+        "title": "Mentoria 1:1",
+        "desc": "Engenheiro sénior dedicado a cada estagiário."
+      },
+      {
+        "id": 3,
+        "title": "Projecto real",
+        "desc": "Contribua para plataformas em produção."
+      },
+      {
+        "id": 4,
+        "title": "Certificado",
+        "desc": "Reconhecimento da experiência adquirida."
+      },
+      {
+        "id": 5,
+        "title": "Integração",
+        "desc": "Caminho directo para contratação."
+      }
+    ]
+  },
+  "clients": {
+    "label": "Clientes",
+    "title": "Nossos Clientes",
+    "desc": "Orgulhamo-nos de contribuir para o sucesso de instituições líderes em Angola, em sectores que exigem segurança, conformidade e escala.",
+    "items": [
+      {
+        "id": 1,
+        "name": "Polícia Nacional",
+        "img": "/policia-nacional.png",
+        "tag": "Segurança Pública"
+      },
+      {
+        "id": 2,
+        "name": "Super Seguros",
+        "img": "/super-seguros.png",
+        "tag": "Seguros"
+      },
+      {
+        "id": 3,
+        "name": "Banco Sol",
+        "img": "/banco.png",
+        "tag": "Banca"
+      },
+      {
+        "id": 4,
+        "name": "Atlantic Medical Center",
+        "img": "/antlatic.png",
+        "tag": "Saúde"
+      },
+      {
+        "id": 5,
+        "name": "UHAYELE WETO",
+        "img": "/ong.png",
+        "tag": "Sáude Pública"
+      },
+      {
+        "id": 6,
+        "name": "Hilário Solano Advogados",
+        "img": "hilario.png",
+        "tag": "Jurísdição e apoio Técnico Legal"
+      },
+      {
+        "id": 7,
+        "name": "CGC - Copia Group of Companies",
+        "img": "naosei.png",
+        "tag": ""
+      },
+      {
+        "id": 8,
+        "name": "Lucas Energies, Oil e Gás",
+        "img": "lucas.png",
+        "tag": "energias"
+      },
+      {
+        "id": 9,
+        "name": "+1 salo",
+        "img": "1salo.png",
+        "tag": ""
+      }
+    ]
+  },
+  "contact": {
+    "label": "Fale Connosco",
+    "title": "Vamos construir algo robusto",
+    "desc": "Descreva o seu desafio. Respondemos em menos de 24 horas com uma proposta inicial sem compromisso.",
+    "interests": [
+      "Plataforma Documental",
+      "Contratos & Compliance",
+      "Logística, Património & Manutenção",
+      "Operações Mineiras",
+      "Gestão Hospitalar",
+      "PA2 — Procurement",
+      "Plataforma Agro",
+      "Mombange",
+      "+1SaLo",
+      "Integrações / Dados / Segurança",
+      "Estágios-Pro",
+      "Outro"
+    ],
+    "info": {
+      "schedule": "Seg–Sex · 08h00–18h00 · Suporte 24/7",
+      "heading": "Informações de Contacto",
+      "subheading": "Equipa GSAPLATFORM · Luanda, Angola",
+      "emailTitle": "E-mail",
+      "emailValue": "geral@gsaplatform.co",
+      "phoneTitle": "Telefone",
+      "phoneValue": "+244 923 652 110",
+      "addressTitle": "Sede",
+      "addressValue": "Talatona, Royal Park Edificio do Banco Keve 3º andar",
+      "hoursTitle": "Horário",
+      "hoursValue": "Seg–Sex · 08h00–18h00 · Suporte 24/7"
+    },
+    "form": {
+      "name": "Nome Completo",
+      "email": "E-mail Profissional",
+      "phone": "Telefone / WhatsApp",
+      "topic": "Qual a Plataforma ou Serviço do seu interesse?",
+      "selectPlaceholder": "Selecione uma opção",
+      "message": "Descreva brevemente o seu desafio ou necessidade...",
+      "submit": "Enviar Mensagem",
+      "submitting": "A enviar...",
+      "namePlaceholder": "O seu nome",
+      "emailPlaceholder": "email@empresa.ao",
+      "phonePlaceholder": "+244 ___ ___ ___",
+      "messagePlaceholder": "Conte-nos sobre o seu projecto"
+    },
+    "validation": {
+      "nameRequired": "Nome é obrigatório",
+      "nameMin": "Mínimo 3 caracteres",
+      "emailRequired": "E-mail é obrigatório",
+      "emailInvalid": "E-mail inválido",
+      "phoneRequired": "Telefone é obrigatório",
+      "phoneInvalid": "Telefone inválido",
+      "phoneMin": "Mínimo 9 dígitos",
+      "topicRequired": "Assunto é obrigatório",
+      "messageRequired": "Mensagem é obrigatória",
+      "messageMin": "Mínimo 10 caracteres"
+    },
+    "toasts": {
+      "preparing": "A preparar o seu e-mail...",
+      "success": "E-mail preparado! Por favor, envie a mensagem na sua aplicação de e-mail.",
+      "error": "Erro ao processar o formulário. Tente novamente."
+    }
+  },
+  "chatbot": {
+    "headerTitle": "Suporte Técnico GSA",
+    "headerStatus": "Online • Normalmente responde rápido",
+    "welcomeMessage": "Olá! Sou o assistente virtual da GSAPLATFORM. Como posso ajudar hoje?",
+    "defaultResponse": "Obrigado pela mensagem. Um consultor responderá brevemente. Pode também escrever para info@gsaplatform.ao.",
+    "inputPlaceholder": "Escreva a sua mensagem...",
+    "quickChips": ["Plataformas", "Serviços", "Estágios-Pro", "Contactar"],
+    "fluxos": [
+      {
+        "resposta": "Temos 9 plataformas próprias: Documental, Contratos & Compliance, Logística, Operações Mineiras, Hospitalar, Procurement, Agro, Mombange e +1$aLo. Sobre qual quer saber mais?"
+      },
+      {
+        "resposta": "Oferecemos Integrações, Transformação de Dados e Segurança de Informação. Qual lhe interessa?"
+      },
+      {
+        "resposta": "As nossas Integrações cobrem SQL, NoSQL, ERPs, core bancário, sistemas legados e APIs. Quer falar com um engenheiro?"
+      },
+      {
+        "resposta": "Construímos pipelines, modelagem dimensional e governança. Posso encaminhar para a equipa."
+      },
+      {
+        "resposta": "Cobrimos política de segurança, controlos de acesso, pentesting e compliance. Posso agendar uma conversa."
+      },
+      {
+        "resposta": "O programa Estágios-Pro inclui bolsa mensal e mentoria 1:1. Candidate-se na secção Estágios-Pro."
+      },
+      {
+        "resposta": "Pode enviar mensagem em info@gsaplatform.ao ou usar o formulário em Contactos."
+      },
+      {
+        "resposta": "Mombange é a nossa plataforma de venda e distribuição de gás online — app, gestão de entregadores, rotas e pagamentos."
+      },
+      {
+        "resposta": "A Plataforma Agro cobre parcelas, culturas e rastreabilidade. Quer uma demo?"
+      },
+      {
+        "resposta": "Os nossos parceiros incluem AkiMoney-5Linhas e Multitel. Trabalho conjunto em fintech e infra-estrutura."
+      },
+      {
+        "resposta": "Veja a nossa agenda na secção Eventos — GSA Tech Day, workshops e Open Day do Estágios-Pro."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Software empresarial construído em Angola, para os desafios reais das organizações angolanas.",
+    "navigation": "Navegação",
+    "followUs": "Segue-nos",
+    "navLinks": {
+      "services": "Serviços",
+      "aboutUs": "Sobre Nós",
+      "testimonials": "Testemunhos",
+      "events": "Eventos",
+      "contact": "Contacto"
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Soluções Empresariais Angolanas",
+      "description": "A GSAPLATFORM entrega plataformas tecnológicas angolanas para compliance, logística, saúde, procurement e agro, otimizando processos e operações empresariais."
+    }
+  },
+  "projects": {
+    "defaultTag": "Plataforma Empresarial",
+    "breadcrumbPortfolio": "Portfólio",
+    "aboutPlatform": "Sobre a Plataforma",
+    "type": "Tipo",
+    "status": "Estado",
+    "active": "Ativo",
+    "whyNeedTitle": "Porque precisa",
+    "defaultTagLower": "transformação digital",
+    "defaultDescription": "Conheça {{title}}, a solução GSA para {{tag}} em Angola.",
+    "platformOf": "Plataforma de {{tag}}",
+    "gsaPlatform": "Plataforma GSA",
+    "country": "Angola",
+    "businessSoftware": "Software Empresarial",
+    "statusActive": "Status: Activo",
+    "capabilities": "Capacidades Principais",
+    "modules": "Módulos",
+    "sector": "Sector",
+    "project": "Projecto",
+    "scope": "Alcance",
+    "national": "Nacional",
+    "overview": "Visão Geral",
+    "whatItDoes": "O Que Faz",
+    "platform": "Plataforma",
+    "visitPlatform": "Visite a Plataforma"
+  },
+  "platforms": {
+    "section": {
+      "label": "PORTFÓLIO",
+      "title": "Soluções que Transformam Sectores",
+      "description": "Plataformas criadas para otimizar processos e aumentar a eficiência em sectores críticos como compliance, jurídico, RH, agricultura, logística e saúde."
+    },
+    "items": {
+      "pcont": {
+        "title": "PCONT",
+        "tag": "Plataformas de Contratos",
+        "headline": "Transforme a Gestão de Contratos numa Vantagem Competitiva",
+        "desc": "Imagine nunca mais perder um prazo, nunca mais procurar um contrato perdido numa pasta cheia de PDFs, e ter todo o histórico do fornecedor ao alcance de um clique. Isso não é luxo — é o PCONT.",
+        "whatDo": "O PCONT gere todo o ciclo de vida dos seus contratos: desde a criação e negociação, passando pela assinatura digital, até ao acompanhamento de renovações e rescisões. Sem papelada. Sem confusão. Sem dores de cabeça.",
+        "forWho": "Gestores de compras, departamentos jurídicos e compliance, diretores financeiros e qualquer empresa que assine dezenas — ou centenas — de contratos por ano.",
+        "whyNeed": [
+          {
+            "title": "Visibilidade Total",
+            "description": "Todos os contratos numa única plataforma. Quem assinou, quando expira, quais têm cláusulas críticas."
+          },
+          {
+            "title": "Alertas Automáticos",
+            "description": "Nunca mais perca uma renovação. O sistema avisa antes do prazo acabar."
+          },
+          {
+            "title": "Assinatura Digital",
+            "description": "Assine e envie contratos em minutos, sem ter de imprimir, digitalizar ou enviar por correio."
+          },
+          {
+            "title": "Controlo Total",
+            "description": "Histórico completo de alterações, aprovações e comunicações relacionadas com cada contrato."
+          },
+          {
+            "title": "Conformidade Garantida",
+            "description": "Cumprimento legal integrado para cada tipo de contrato."
+          }
+        ],
+        "features": [
+          "Biblioteca Centralizada",
+          "Assinatura Digital",
+          "Alertas de Renovação",
+          "Relatórios e Analytics",
+          "Integração com ERP",
+          "Automatização dos Processos"
+        ],
+        "slogan": "Gestão de contratos deixou de ser um caos. Com o PCONT, é uma vantagem competitiva."
+      },
+      "pcom": {
+        "title": "PCOM",
+        "tag": "Compliance",
+        "headline": "O Seu Compliance Officer Vai Dizer «Finalmente!»",
+        "desc": "Cansado de folhas de cálculo infinitas, relatórios desorganizados e aquela sensação constante de que algo pode estar fora de conformidade? O PCOM existe para dar ao seu Compliance Officer — e a toda a liderança — a visibilidade e o controlo que o mercado exige.",
+        "whatDo": "O PCOM é a plataforma de gestão integrada de Compliance que centraliza políticas, procedimentos, riscos, controlos, auditorias e elaboração de relatórios regulatórios. Da integração de novos colaboradores à monitorização contínua de conformidade, tudo acontece num único ambiente seguro e auditável.",
+        "forWho": "Gestão, compliance, auditoria, risco e qualquer organização com exigências regulatórias e necessidade de rastreabilidade.",
+        "whyNeed": [
+          {
+            "title": "Gestão Centralizada de Políticas",
+            "description": "Crie, distribua, rastreie e confirme a aceitação de políticas internas sem papelada."
+          },
+          {
+            "title": "Matriz de Riscos Dinâmica",
+            "description": "Mapeie, avalie e acompanhe os riscos de conformidade em tempo real."
+          },
+          {
+            "title": "Gestão de Auditorias",
+            "description": "Agende auditorias, atribua responsáveis, acompanhe constatações e planos de ação."
+          },
+          {
+            "title": "Relatórios Automáticos",
+            "description": "Relatórios prontos para reguladores, conselhos de administração e comités de risco."
+          },
+          {
+            "title": "Gestão de Formação",
+            "description": "Rastreio das formações obrigatórias em Compliance de todos os colaboradores."
+          },
+          {
+            "title": "Alertas Inteligentes",
+            "description": "A plataforma avisa quando há prazos de compliance ou ações pendentes."
+          }
+        ],
+        "features": [
+          "Biblioteca de Políticas",
+          "Matriz de Riscos e Controlos",
+          "Gestão de Auditorias",
+          "Relatórios Automáticos",
+          "Formação e Capacitação",
+          "Gestão de Incidentes",
+          "Dashboard de Compliance",
+          "Integração Regulatória"
+        ],
+        "slogan": "O PCOM não só reduz multas e litígios, como protege a reputação e a sustentabilidade das operações e do negócio."
+      },
+      "pm": {
+        "title": "PM",
+        "tag": "Logística e Manutenção",
+        "headline": "Cada Ativo sob Controlo. Cada Processo Otimizado.",
+        "desc": "Desde o terreno ao teto, do armazém ao veículo, do edifício ao equipamento — o património da sua empresa precisa de ser gerido com rigor. A PM faz isso e muito mais. Tudo num só lugar.",
+        "whatDo": "A Plataforma Logística, Património e Manutenção é a solução completa para gerir os ativos físicos da sua organização. Controla inventário, logística, manutenção preventiva e corretiva, gestão de espaços e muito mais.",
+        "forWho": "Empresas com ativos físicos, múltiplas localizações, operações logísticas e necessidade de manutenção operacional rigorosa.",
+        "whyNeed": [
+          {
+            "title": "Visão 360° do Património",
+            "description": "Sabe exatamente o que tem, onde está e em que condições."
+          },
+          {
+            "title": "Menos Avarias, Menos Custos",
+            "description": "Manutenção preventiva reduz paragens inesperadas em até 60%."
+          },
+          {
+            "title": "Otimização de Stocks",
+            "description": "Evita tanto a rutura como o excesso de inventário."
+          },
+          {
+            "title": "Decisões Baseadas em Dados",
+            "description": "Relatórios de utilização, custos de manutenção e vida útil dos ativos."
+          }
+        ],
+        "features": [
+          "Gestão de Logística",
+          "Gestão de Património",
+          "Manutenção Preventiva",
+          "Ordens de Trabalho",
+          "Gestão de Espaços",
+          "Relatórios Operacionais",
+          "Integração ERP",
+          "Multi-localização"
+        ],
+        "slogan": "Pare de gerir o património com especulações. O PM é o seu cockpit operacional com dados reais."
+      },
+      "pih": {
+        "title": "PIH",
+        "tag": "Saúde",
+        "headline": "O Futuro da Gestão Hospitalar. Agora.",
+        "desc": "Hospitais e clínicas que operam com processos desorganizados colocam vidas em risco. A PIH foi construída para dar às instituições de saúde a tecnologia de que os profissionais precisam: eficiência operacional, segurança do paciente e integração total dos serviços.",
+        "whatDo": "A Plataforma Hospitalar Integrada conecta todos os departamentos e processos de uma instituição de saúde. Desde a gestão de internamento e consulta externa, ao bloco operatório, farmácia, laboratório e administrativos — tudo numa plataforma única e interoperável.",
+        "forWho": "Hospitais, clínicas e redes de saúde com necessidade de fluxo clínico, gestão de pacientes e segurança operacional.",
+        "whyNeed": [
+          {
+            "title": "Segurança do Paciente em Primeiro Lugar",
+            "description": "Alertas de interação medicamentosa, alergias e validação clínica automática."
+          },
+          {
+            "title": "Informação Sempre Disponível",
+            "description": "Processo clínico único e acessível a todos os profissionais autorizados."
+          },
+          {
+            "title": "Redução de Erros Médicos",
+            "description": "Digitalização de processos reduz erros de prescrição e identificação."
+          },
+          {
+            "title": "Eficiência Operacional",
+            "description": "Menos tempo em papelada, mais tempo para o paciente."
+          },
+          {
+            "title": "Redução de Custos com Consumíveis",
+            "description": "Controlo rigoroso da farmácia, stocks e dispensação reduz desperdício."
+          },
+          {
+            "title": "Integração com Equipamento Hospitalar",
+            "description": "Ligação direta a monitores, bombas de infusão, laboratório e imagiologia."
+          }
+        ],
+        "features": [
+          "Gestão Clínica",
+          "Farmácia e Dispensação",
+          "Laboratório e Imagiologia",
+          "Internamento e Consultas",
+          "Bloco Operatório",
+          "Faturação e Convenções",
+          "Documentação Clínica",
+          "Integração com Equipamentos"
+        ],
+        "slogan": "Cada minuto ganho na administração é mais um minuto para o paciente. A PIH devolve tempo aos profissionais de saúde."
+      },
+      "p2p": {
+        "title": "P2P",
+        "tag": "Procurement e Compras",
+        "headline": "Compras Inteligentes. Poupança Real.",
+        "desc": "Processos de compra lentos, aprovações bloqueadas, fornecedores sem controlo, faturas que ninguém sabe onde estão — estas são as dores que a P2P resolve. A Plataforma de Procurement transforma o ciclo completo de aquisição numa experiência rápida, transparente e financeiramente inteligente.",
+        "whatDo": "A P2P cobre todo o ciclo Source-to-Pay: desde a requisição e aprovação de compras, passando pela negociação e gestão de fornecedores, até à receção de mercadorias e processamento de faturas. Compras centralizadas, controladas e otimizadas.",
+        "forWho": "Empresas com elevado volume de aquisições e necessidade de controlo financeiro, compliance e eficiência operacional.",
+        "whyNeed": [
+          {
+            "title": "Controlo de Gastos",
+            "description": "Visibilidade total sobre o que se compra, quando, a quem e por quanto."
+          },
+          {
+            "title": "Processos Mais Rápidos",
+            "description": "Requisições e aprovações que demoravam dias passam a minutos."
+          },
+          {
+            "title": "Poupança Mensurável",
+            "description": "Negociação centralizada gera poupanças reais e mensuráveis."
+          },
+          {
+            "title": "Menos Erros e Fraude",
+            "description": "Workflows de aprovação e validação tripartida eliminam compras fora de processo."
+          }
+        ],
+        "features": [
+          "Requisição e Aprovação",
+          "Catálogo e Gestão de Compras",
+          "Gestão de Fornecedores",
+          "Receção e Validação",
+          "Faturação e Pagamentos",
+          "Portal de Fornecedores",
+          "Aprovação Mobile",
+          "Reconciliação Automática"
+        ],
+        "slogan": "A melhor compra não é a mais barata. É a que foi certa desde o início. A P2P garante isso em cada processo."
+      },
+      "tickets": {
+        "title": "TICKETS",
+        "tag": "Manutenção e HelpDesk",
+        "headline": "Problema Resolvido. Rapidamente.",
+        "desc": "Uma inundação no escritório, a luz que não acende na receção, o ar-condicionado que parou — quem resolve? Com a plataforma de Tickets, tudo chega, é atribuído e resolvido com velocidade e rastreabilidade total.",
+        "whatDo": "Uma plataforma integrada de gestão de tickets para manutenção de imóveis e HelpDesk de TI. Os colaboradores reportam incidentes, o sistema atribui automaticamente, técnicos executam, e a gestão tem visibilidade total.",
+        "forWho": "Organizações com serviços internos, manutenção de imóveis e necessidade de rastreabilidade operacional.",
+        "whyNeed": [
+          {
+            "title": "Tempo de Resolução Reduzido",
+            "description": "Atribuição automática e monitorização de SLA garantem que nada fica parado."
+          },
+          {
+            "title": "Visibilidade para a Gestão",
+            "description": "Dashboard com tickets abertos, em progresso e resolvidos em tempo real."
+          },
+          {
+            "title": "Histórico Completo",
+            "description": "Cada imóvel, equipamento ou utilizador tem o seu histórico de intervenções."
+          },
+          {
+            "title": "Avaliação de Prestadores",
+            "description": "Classifique técnicos e fornecedores e tome decisões baseadas em dados."
+          }
+        ],
+        "features": [
+          "Manutenção de Imóveis",
+          "HelpDesk de TI",
+          "Atribuição Automática",
+          "Gestão de SLA",
+          "Manutenção Preventiva",
+          "Dashboard Operacional",
+          "App Mobile",
+          "Avaliação de Serviço"
+        ],
+        "slogan": "O ticket que não se perde. O problema que se resolve. O serviço que se mede. Tudo na mesma plataforma."
+      },
+      "pap": {
+        "title": "PAP",
+        "tag": "Gestão de Projetos",
+        "headline": "Entre Projetos Dentro do Prazo. Sempre.",
+        "desc": "Metas não cumpridas, inúmeras reuniões de ponto de situação sem informação real, recursos sobrecarregados e entregas em atraso — se isto lhe é familiar, a PAP é a mudança de que a sua organização necessita.",
+        "whatDo": "A Plataforma de Automação de Projetos permite planear, executar, monitorizar e reportar projetos de forma estruturada e automatizada. Desde projetos simples de equipa até programas multi-projecto com governança complexa.",
+        "forWho": "PMOs, gestores de projetos e equipas com múltiplos programas ou entregas críticas.",
+        "whyNeed": [
+          {
+            "title": "Visibilidade Real",
+            "description": "A gestão sabe sempre o estado dos projetos sem precisar de reunião de ponto de situação."
+          },
+          {
+            "title": "Menos Trabalho Administrativo",
+            "description": "Automatização cuida das notificações, relatórios e lembretes."
+          },
+          {
+            "title": "Decisões Informadas",
+            "description": "Indicadores como SPI e CPI mostram a saúde real dos projetos."
+          },
+          {
+            "title": "Governança Escalável",
+            "description": "PMOs ganham ferramentas para gerir dezenas de projetos em simultâneo."
+          }
+        ],
+        "features": [
+          "Planeamento e WBS/EAP",
+          "Automação de Workflows",
+          "Dashboard em Tempo Real",
+          "Gestão de Equipas",
+          "Indicadores KPI",
+          "Gestão de Riscos",
+          "Relatórios Automáticos",
+          "Suporte Agile e Waterfall"
+        ],
+        "slogan": "O maior risco de um projeto não é falhar. É não saber que está a falhar até ser tarde demais. A PAP garante que nunca chega lá."
+      },
+      "piom": {
+        "title": "PIOM",
+        "tag": "Mineração e Operações Mineiras",
+        "headline": "A Plataforma Integrada de Operações Mineiras",
+        "desc": "A PIOM reúne numa única plataforma todos os processos críticos de uma operação mineira. Desde a gestão documental, logística, património e manutenção até ao controlo operacional, fiscalização, procurement e estatísticas, tudo funciona de forma integrada para aumentar a eficiência, reduzir custos e apoiar decisões baseadas em dados.",
+        "whatDo": "A Plataforma Integrada de Operações Mineiras (PIOM) centraliza e automatiza toda a gestão operacional de empresas mineiras. Os seus módulos comunicam entre si, permitindo acompanhar em tempo real equipamentos, equipas, produção, contratos, manutenção, logística, documentação, indicadores operacionais e integrações com sistemas externos como ERP, SCADA, GPS e sensores IoT.",
+        "forWho": "Operações mineiras que precisam de integração entre produção, manutenção, logística, contratos e fiscalizações.",
+        "whyNeed": [
+          {
+            "title": "Operação Totalmente Integrada",
+            "description": "Todos os departamentos operam na mesma plataforma, eliminando silos de informação."
+          },
+          {
+            "title": "Decisões Baseadas em Dados",
+            "description": "Dashboards e indicadores estatísticos permitem acompanhar a operação em tempo real."
+          },
+          {
+            "title": "Automação Operacional",
+            "description": "Automatiza processos, reduz tarefas manuais e melhora a produtividade das equipas."
+          },
+          {
+            "title": "Integração com Equipamentos",
+            "description": "Comunicação com sensores, GPS, sistemas SCADA/MES e ERP para recolha automática de dados."
+          },
+          {
+            "title": "Conformidade com Normas Internacionais",
+            "description": "Desenvolvida seguindo normas ISO/IEC e requisitos regulatórios do setor mineiro."
+          },
+          {
+            "title": "Escalabilidade",
+            "description": "Adaptável a pequenas, médias ou grandes operações mineiras com parametrização completa."
+          }
+        ],
+        "features": [
+          "Gestão Documental",
+          "Gestão de Contratos",
+          "Gestão de Projetos",
+          "Fiscalização",
+          "Procurement",
+          "Gestão de Equipas",
+          "Património",
+          "Logística",
+          "Manutenção",
+          "Sistema de Tickets",
+          "Dashboards Estatísticos",
+          "Integração ERP",
+          "Integração GPS",
+          "Integração SCADA/MES",
+          "Integração IoT",
+          "Parametrização Completa"
+        ],
+        "slogan": "Uma única plataforma. Toda a operação mineira sob controlo."
+      }
+    },
+    "carousel": {
+      "prev": "Plataforma anterior",
+      "next": "Próxima plataforma",
+      "navigationLabel": "Navegação por plataforma",
+      "platformNumber": "Plataforma {{number}}",
+      "pauseAutoScroll": "Pausar scroll automático",
+      "startAutoScroll": "Iniciar scroll automático",
+      "goToLabel": "Navegar para {{title}}"
+    }
+  },
+  "notFound": {
+    "title": "Página Não Encontrada",
+    "description": "A página do projeto solicitado não foi encontrada. Retorne à página inicial do GSAPLATFORM para explorar outras soluções.",
+    "message": "A rota solicitada não foi encontrada.",
+    "back": "Retornar"
+  }
+}

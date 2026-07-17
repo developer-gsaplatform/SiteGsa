@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { platformsData } from "../../../config/platforms";
+import { useLocalizedPlatformsSection } from "../../../utils/platformContent";
 import { useCoverflowCarousel } from "../../../hooks/useCoverflowCarousel";
 import HeadSection from "../../ui/HeadSection";
 import CoverflowCard from "./CoverflowCard";
@@ -12,7 +12,7 @@ import {
 } from "./../../../utils/responsiveCoverflow";
 
 export default function PlatformsCarousel() {
-  const items = platformsData.items;
+  const { items, title, label } = useLocalizedPlatformsSection();
   const total = items.length;
 
   const { current, animating, goTo, prev, next, onTouchStart, onTouchEnd } =
@@ -55,9 +55,12 @@ export default function PlatformsCarousel() {
   const trackHeight = cardDims.height * 1.35 + 32;
 
   return (
-    <section className="relative max-w-7xl w-[95%] mx-auto select-none" id="plataformas">
+    <section
+      className="relative max-w-7xl w-[95%] mx-auto select-none"
+      id="plataformas"
+    >
       {/* ── Header ── */}
-      <HeadSection title={platformsData.title} label={platformsData.label} />
+      <HeadSection title={title} label={label} />
 
       {/* ══════════════════════════════════════════════════
           STAGE — coverflow track + setas

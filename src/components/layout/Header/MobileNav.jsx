@@ -1,4 +1,6 @@
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+
 export default function MobileNav({
   navLinks,
   STYLES,
@@ -6,10 +8,12 @@ export default function MobileNav({
   closeMenu,
   toggleMenu,
 }) {
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.nav
-        className="fixed top-17 right-0 w-70 h-[calc(100dvh-68px)] bg-gsa-black p-6 border-l border-dashed border-gsa-purple-soft/30 overflow-y-auto"
+        className="fixed top-17 right-0 w-70 h-[calc(100dvh-100px)] bg-gsa-black p-6 border-l border-dashed border-gsa-purple-soft/30 overflow-y-auto"
         initial={{ x: "100%" }}
         animate={isOpen ? { x: 0 } : { x: "100%" }}
         transition={{ duration: 0.3 }}
@@ -41,7 +45,7 @@ export default function MobileNav({
               onClick={closeMenu}
               className={`${STYLES.navLinkBase} ${STYLES.navLinkCTA}`}
             >
-              Contactos
+              {t("navigation.contactos")}
             </a>
           </motion.li>
         </ul>

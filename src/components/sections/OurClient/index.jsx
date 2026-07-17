@@ -1,4 +1,6 @@
+import { useMemo } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { useCarousel } from "./../../../hooks/useCarousel";
 import ScrollReveal from "../../common/ScrollReveal";
 import HeadSection from "../../ui/HeadSection";
@@ -156,21 +158,35 @@ const ClientCarousel = ({ items = [] }) => {
 // COMPONENTE PRINCIPAL (section já com largura definida)
 // ============================================================
 export default function OurClients() {
+  const { t } = useTranslation();
+
+  const clientsData = useMemo(
+    () => ({
+      label: t("clients.label"),
+      title: t("clients.title"),
+      desc: t("clients.desc"),
+      img: t("clients.img"),
+      items: t("clients.items", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   return (
     <section
       id="clientes"
       className="py-20 max-w-7xl w-[95%] mx-auto flex flex-col items-center border-dashed border-gsa-gray-7 relative z-10"
-      aria-label="Clientes da empresa"
+      aria-label={clientsData.title}
     >
       <HeadSection
-        label="Clientes"
-        title="Nossos Clientes"
-        desc="Orgulhamo-nos de contribuir para o sucesso de instituições líderes em Angola, em sectores que exigem segurança, conformidade e escala."
+        label={clientsData.label}
+        title={clientsData.title}
+        desc={clientsData.desc}
         center
       />
 
       <ScrollReveal variant="fadeUp" delay={0.1} className="w-full">
-        <ClientCarousel items={CLIENTS} />
+        {console.log("items dos clientes", clientsData.items)}
+        <ClientCarousel items={clientsData.items} />
       </ScrollReveal>
     </section>
   );

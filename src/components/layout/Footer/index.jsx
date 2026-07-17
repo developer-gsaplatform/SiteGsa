@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedinIn,
@@ -11,15 +13,20 @@ const SOCIALS = [
   { icon: faTwitter, href: "/#", label: "X (Twitter)" },
 ];
 
-const NAV_LINKS = [
-  { label: "Serviços", href: "/#servicos" },
-  { label: "Sobre Nós", href: "/#sobre" },
-  { label: "Testemunhos", href: "/#testemunhos" },
-  { label: "Eventos", href: "/#eventos" },
-  { label: "Contacto", href: "/#contacto" },
-];
-
 export default function Footer() {
+  const { t } = useTranslation();
+
+  const NAV_LINKS = useMemo(
+    () => [
+      { label: t("navigation.servicos"), href: "/#servicos" },
+      { label: t("navigation.sobre"), href: "/#sobre" },
+      { label: t("testimonials.label"), href: "/#testemunhos" },
+      { label: t("navigation.eventos"), href: "/#eventos" },
+      { label: t("navigation.contactos"), href: "/#contactos" },
+    ],
+    [t],
+  );
+
   return (
     <footer className="w-full bg-gsa-black border-t border-dashed border-gsa-gray-7 relative z-10">
       <div className="max-w-7xl mx-auto px-[5%]">
@@ -35,15 +42,14 @@ export default function Footer() {
               GSAPLATFORM
             </a>
             <p className="text-xs text-gsa-gray-5/70 leading-relaxed">
-              Software empresarial construído em Angola, para os desafios reais
-              das organizações angolanas.
+              {t("footer.tagline")}
             </p>
           </div>
 
           {/* Navegação */}
           <div className="flex flex-col gap-3">
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gsa-purple-soft">
-              Navegação
+              {t("footer.navigation")}
             </span>
             <nav className="flex flex-col gap-2">
               {NAV_LINKS.map((link) => (
@@ -61,7 +67,7 @@ export default function Footer() {
           {/* Redes Sociais */}
           <div className="flex flex-col gap-3">
             <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-gsa-purple-soft">
-              Segue-nos
+              {t("footer.followUs")}
             </span>
             <div className="flex items-center gap-3">
               {SOCIALS.map((s) => (

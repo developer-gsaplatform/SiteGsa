@@ -1,8 +1,21 @@
-import { servicesData } from "./../../../config/services";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import HeadSection from "./../../ui/HeadSection";
 import ServiceSplitCarousel from "./ServiceSplitCarousel";
 
 export default function Services() {
+  const { t } = useTranslation();
+
+  const servicesData = useMemo(
+    () => ({
+      label: t("services.label"),
+      title: t("services.title"),
+      sub: t("services.sub"),
+      items: t("services.items", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   return (
     <section
       id="servicos"
@@ -13,7 +26,7 @@ export default function Services() {
           label={servicesData.label}
           title={servicesData.title}
           sub={servicesData.sub}
-          contactButtonText={"Saiba mais"}
+          contactButtonText={t("services.learnMore")}
         />
 
         <ServiceSplitCarousel items={servicesData.items} />

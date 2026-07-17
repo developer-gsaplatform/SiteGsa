@@ -1,5 +1,7 @@
+import { useMemo } from "react";
 import { useParams } from "react-router-dom";
-import { platformsData } from "./../../config/platforms";
+import { useTranslation } from "react-i18next";
+import { useLocalizedPlatforms } from "./../../utils/platformContent";
 import useSeo from "./../../hooks/useSeo";
 import Ticker from "./Ticker";
 import FeaturesGrid from "./FeaturesGrid";
@@ -12,27 +14,36 @@ import NotFound from "../../components/layout/NotFound";
 
 export default function Project() {
   const { slug } = useParams();
-  const project = platformsData.items.find(
+  const { t } = useTranslation();
+  const projects = useLocalizedPlatforms();
+  const project = projects.find(
     (item) => item.slug.toLowerCase() === slug.toLowerCase(),
   );
 
-  const seoData = project
-    ? {
-        title: `${project.title} — ${project.tag ?? "Plataforma Empresarial"}`,
-        description:
-          project.desc ||
-          `Conheça ${project.title}, a solução GSA para ${project.tag?.toLowerCase() ?? "transformação digital"} em Angola.`,
-        url: `/project/${slug}`,
-        image: project.image,
-        type: "article",
-      }
-    : {
-        title: "Página Não Encontrada",
-        description:
-          "A página do projeto solicitado não foi encontrada. Retorne à página inicial do GSAPLATFORM para explorar outras soluções.",
-        url: "/404",
-        type: "website",
-      };
+  const seoData = useMemo(
+    () =>
+      project
+        ? {
+            title: `${project.title} — ${project.tag ?? t("projects.defaultTag")}`,
+            description:
+              project.desc ||
+              t("projects.defaultDescription", {
+                title: project.title,
+                tag:
+                  project.tag?.toLowerCase() ?? t("projects.defaultTagLower"),
+              }),
+            url: `/project/${slug}`,
+            image: project.image,
+            type: "article",
+          }
+        : {
+            title: t("notFound.title"),
+            description: t("notFound.description"),
+            url: "/404",
+            type: "website",
+          },
+    [project, slug, t],
+  );
 
   useSeo(seoData);
 
@@ -53,10 +64,15 @@ export default function Project() {
 
   const tickerItems = [
     { label: title, highlight: false },
-    { label: tag ? `Plataforma de ${tag}` : "Plataforma GSA", highlight: true },
-    { label: "Angola", highlight: true },
-    { label: "Software Empresarial", highlight: false },
-    { label: "Status: Activo", highlight: false },
+    {
+      label: tag
+        ? t("projects.platformOf", { tag })
+        : t("projects.gsaPlatform"),
+      highlight: true,
+    },
+    { label: t("projects.country"), highlight: true },
+    { label: t("projects.businessSoftware"), highlight: false },
+    { label: t("projects.statusActive"), highlight: false },
   ];
 
   const sloganBgWord = slogan ? slogan.split(" ")[0] : "";
@@ -71,10 +87,10 @@ export default function Project() {
         <div className="py-14 border-b border-gsa-white/30 max-w-4xl mx-auto w-[95%]">
           <div className="flex items-baseline justify-between mb-6 md:p-0 px-3">
             <span className=" text-[12px] tracking-[0.2em] uppercase text-gsa-gray">
-              Capacidades Principais
+              {t("projects.capabilities")}
             </span>
             <span className="text-[12px] tracking-[0.2em] text-gsa-gray">
-              {String(features.length).padStart(2, "0")} Módulos
+              {String(features.length).padStart(2, "0")} {t("projects.modules")}
             </span>
           </div>
           <FeaturesGrid features={features} />

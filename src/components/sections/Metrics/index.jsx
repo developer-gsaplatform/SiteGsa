@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-
-import {
-  metricsData,
-  containerVariants,
-  itemVariants,
-} from "./../../../config/metrics";
-
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
+import { containerVariants, itemVariants } from "./../../../config/metrics";
 import MetricCard from "./MetricCard";
-
 export default function Metrics() {
+  const { t } = useTranslation();
+  const metricsData = useMemo(() => {
+    return t("metrics", { returnObjects: true }) || [];
+  }, [t]);
+
+  console.log("metrics tranalated", metricsData);
   return (
     <section
       id="numeros"
@@ -24,12 +25,8 @@ export default function Metrics() {
           amount: 0.2,
         }}
       >
-        {metricsData.map((metric) => (
-          <MetricCard
-            key={metric.label}
-            metric={metric}
-            variants={itemVariants}
-          />
+        {metricsData.map((metric, idx) => (
+          <MetricCard key={idx} metric={metric} variants={itemVariants} />
         ))}
       </motion.div>
     </section>

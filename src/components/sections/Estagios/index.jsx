@@ -1,9 +1,23 @@
+import { useMemo } from "react";
 import { motion } from "framer-motion";
-import { internshipsData } from "./../../../config/estagios";
+import { useTranslation } from "react-i18next";
 import HeadSection from "./../../ui/HeadSection";
 import LeftSide from "./leftSide";
 import RightSideCard from "./RightSideCard";
 export default function Estagios() {
+  const { t } = useTranslation();
+
+  const internshipsData = useMemo(
+    () => ({
+      label: t("estagios.label"),
+      title: t("estagios.title"),
+      desc: t("estagios.desc"),
+      banner: t("estagios.banner", { returnObjects: true }),
+      perks: t("estagios.perks", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   return (
     <motion.section
       id="estagios-pro"

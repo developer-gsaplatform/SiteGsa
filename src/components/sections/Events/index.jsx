@@ -1,13 +1,23 @@
+import { useMemo } from "react";
 import { motion } from "framer-motion";
-import {
-  eventsData,
-  containerVariants,
-} from "./../../../config/events";
+import { useTranslation } from "react-i18next";
+import { containerVariants } from "./../../../config/events";
 import ScrollReveal from "./../../common/ScrollReveal";
 import HeadSection from "./../../ui/HeadSection";
 import EventCard from "./EventCard";
 
 export default function Events() {
+  const { t } = useTranslation();
+
+  const eventsData = useMemo(
+    () => ({
+      label: t("events.label"),
+      title: t("events.title"),
+      items: t("events.items", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   return (
     <section
       id="eventos"

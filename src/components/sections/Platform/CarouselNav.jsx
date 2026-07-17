@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const base =
@@ -14,9 +15,10 @@ const base =
   "hover:shadow-[0_0_24px_-6px_rgba(169,143,208,0.12)] " +
   "active:scale-[0.93] " +
   "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gsa-purple-soft/40 " +
-  "border-dashed"
+  "border-dashed";
 
 export default function CarouselNav({ direction, onClick, disabled }) {
+  const { t } = useTranslation();
   const pos =
     direction === "prev"
       ? "left-0 sm:left-3 md:left-5"
@@ -28,12 +30,13 @@ export default function CarouselNav({ direction, onClick, disabled }) {
       onClick={onClick}
       disabled={disabled}
       aria-label={
-        direction === "prev" ? "Plataforma anterior" : "Próxima plataforma"
+        direction === "prev"
+          ? t("platforms.carousel.prev")
+          : t("platforms.carousel.next")
       }
       className={`${base} ${pos}`}
     >
-      <Icon size={15} strokeWidth={1.5} className="text-white"/>
+      <Icon size={15} strokeWidth={1.5} className="text-white" />
     </button>
   );
 }
-

@@ -1,9 +1,22 @@
-import { partnersData } from "./../../../../config/partners";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import HeadSection from "./../../../ui/HeadSection";
 import ScrollReveal from "./../../../common/ScrollReveal";
 import PartnersCarousel from "./PartnersCarousel";
 
 export default function Partners() {
+  const { t } = useTranslation();
+
+  const partnersData = useMemo(
+    () => ({
+      label: t("partners.label"),
+      title: t("partners.title"),
+      desc: t("partners.desc"),
+      list: t("partners.list", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   return (
     <section
       id="parceiros"

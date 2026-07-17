@@ -1,10 +1,21 @@
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { testimonialsData } from "./../../../config/testimonials";
 import ScrollReveal from "./../../common/ScrollReveal";
 import HeadSection from "./../../ui/HeadSection";
 
 export default function Testimonials() {
-  // Layout pensado para exatamente 3 depoimentos
+  const { t } = useTranslation();
+
+  const testimonialsData = useMemo(
+    () => ({
+      label: t("testimonials.label"),
+      title: t("testimonials.title"),
+      items: t("testimonials.items", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   const items = testimonialsData.items.slice(0, 3);
 
   return (

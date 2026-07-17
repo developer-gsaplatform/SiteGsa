@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Play, Pause } from "lucide-react";
 
 export default function InfoPanel({
@@ -9,6 +10,7 @@ export default function InfoPanel({
   autoScroll,
   setAutoScroll,
 }) {
+  const { t } = useTranslation();
   const dur = reducedMotion ? "0ms" : "400ms";
 
   return (
@@ -42,7 +44,7 @@ export default function InfoPanel({
         <div
           className="flex items-center gap-2"
           role="tablist"
-          aria-label="Navegação por plataforma"
+          aria-label={t("platforms.carousel.navigationLabel")}
         >
           {items.map((_, i) => {
             const dot = i === current;
@@ -52,7 +54,9 @@ export default function InfoPanel({
                 onClick={() => goTo(i)}
                 role="tab"
                 aria-selected={dot}
-                aria-label={`Plataforma ${i + 1}`}
+                aria-label={t("platforms.carousel.platformNumber", {
+                  number: i + 1,
+                })}
                 className="p-0.5 focus:outline-none focus-visible:ring-1 focus-visible:ring-gsa-purple-soft/30 rounded-full"
               >
                 <span
@@ -75,7 +79,11 @@ export default function InfoPanel({
           <button
             onClick={() => setAutoScroll(!autoScroll)}
             className="p-1 focus:outline-none focus-visible:ring-1 focus-visible:ring-gsa-purple-soft/30 rounded-full text-gsa-purple-soft hover:text-gsa-white transition-colors duration-300 ml-2"
-            aria-label={autoScroll ? "Pausar scroll automático" : "Iniciar scroll automático"}
+            aria-label={
+              autoScroll
+                ? t("platforms.carousel.pauseAutoScroll")
+                : t("platforms.carousel.startAutoScroll")
+            }
           >
             {autoScroll ? <Pause size={18} /> : <Play size={18} />}
           </button>

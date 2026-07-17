@@ -1,5 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+
 export default function DesktopNav({ navLinks, STYLES, linkVariants }) {
+  const { t } = useTranslation();
   return (
     <nav className="flex items-center gap-1">
       <ul className="flex items-center gap-1 list-none">
@@ -31,7 +34,7 @@ export default function DesktopNav({ navLinks, STYLES, linkVariants }) {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contactos
+            {t("navigation.contactos")}
           </motion.a>
         </motion.li>
       </ul>

@@ -1,30 +1,37 @@
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
-const CONTACT_INFO = [
-  {
-    title: "E-mail",
-    value: "geral@gsaplatform.co",
-    icon: Mail,
-  },
-  {
-    title: "Telefone",
-    value: "+244 923 652 110",
-    icon: Phone,
-  },
-  {
-    title: "Sede",
-    value: "Talatona, Royal Park Edificio do Banco Keve 3º andar",
-    icon: MapPin,
-  },
-  {
-    title: "Horário",
-    value: "Seg–Sex · 08h00–18h00 · Suporte 24/7",
-    icon: Clock,
-  },
-];
-
 export default function ContactInfo() {
+  const { t } = useTranslation();
+
+  const CONTACT_INFO = useMemo(
+    () => [
+      {
+        title: t("contact.info.emailTitle"),
+        value: t("contact.info.emailValue"),
+        icon: Mail,
+      },
+      {
+        title: t("contact.info.phoneTitle"),
+        value: t("contact.info.phoneValue"),
+        icon: Phone,
+      },
+      {
+        title: t("contact.info.addressTitle"),
+        value: t("contact.info.addressValue"),
+        icon: MapPin,
+      },
+      {
+        title: t("contact.info.hoursTitle"),
+        value: t("contact.info.hoursValue"),
+        icon: Clock,
+      },
+    ],
+    [t],
+  );
+
   return (
     <motion.div
       className="border border-dashed border-[#9B7BC4] bg-[rgba(22,17,34,0.5)] w-full h-full"
@@ -35,10 +42,10 @@ export default function ContactInfo() {
     >
       <div className="p-[28px_32px] border-b border-dashed border-gsa-gray-2">
         <h3 className="text-[1.5rem] font-extrabold  uppercase tracking-[0.04em] text-[#f5f5f0] mb-1.5">
-          Informações de Contacto
+          {t("contact.info.heading")}
         </h3>
         <p className="text-[0.9rem] text-[#8a8499]">
-          Equipa GSAPLATFORM · Luanda, Angola
+          {t("contact.info.subheading")}
         </p>
       </div>
 

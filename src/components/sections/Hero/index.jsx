@@ -1,4 +1,5 @@
-import { heroData } from "./../../../config/hero";
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import ScrollReveal from "./../../common/ScrollReveal";
 import ContentLeft from "./ContentLeft";
 import AnimatedWrapper from "./AnimatedWrapper";
@@ -8,20 +9,36 @@ import ParticlesInit from "./ParticlesInit";
 const HERO_BG = "/bg-hero.jpg";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
+  const heroData = useMemo(
+    () => ({
+      badge: t("hero.badge"),
+      titleStart: t("hero.titleStart"),
+      titleItalic: t("hero.titleItalic"),
+      titleEnd: t("hero.titleEnd"),
+      description: t("hero.description"),
+      ctaPrimary: { text: t("hero.ctaPrimary"), href: "#plataformas" },
+      ctaGhost: { text: t("hero.ctaGhost"), href: "#contactos" },
+      trustItems: t("hero.trustItems", { returnObjects: true }),
+    }),
+    [t],
+  );
+
   return (
     <section
       id="inicio"
       className="relative min-h-screen flex items-center overflow-hidden z-10 border-b border-dashed border-gsa-purple-soft/20 justify-center md:p-0 py-20"
     >
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url('${HERO_BG}')`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url('${HERO_BG}')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0 z-0 bg-gsa-black/80"

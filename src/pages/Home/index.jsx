@@ -1,3 +1,5 @@
+import { useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import Hero from "./../../components/sections/Hero";
 import Metrics from "./../../components/sections/Metrics";
 import About from "./../../components/sections/About";
@@ -13,12 +15,18 @@ import OurClients from "../../components/sections/OurClient";
 import useSeo from "./../../hooks/useSeo";
 
 export default function Home() {
-  useSeo({
-    title: "Soluções Empresariais Angolanas",
-    description:
-      "GSAPLATFORM entrega plataformas tecnológicas angolanas para compliance, logística, hospitalar, procurement e agro, otimizando processos e operações empresariais.",
-    url: "/",
-  });
+  const { t } = useTranslation();
+
+  const seoData = useMemo(
+    () => ({
+      title: t("seo.home.title"),
+      description: t("seo.home.description"),
+      url: "/",
+    }),
+    [t],
+  );
+
+  useSeo(seoData);
 
   return (
     <>
