@@ -5,7 +5,7 @@ export default function CTA({ website, id }) {
   const { t } = useTranslation();
 
   return (
-    <div className="py-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mx-auto max-w-4xl w-[95%]">
+    <div className="py-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
       <span className=" text-[12px] tracking-[0.4em] uppercase text-gsa-gray-4">
         GSA Platform — {t("projects.project")} {id}
       </span>

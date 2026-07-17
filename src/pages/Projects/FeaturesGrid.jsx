@@ -1,6 +1,6 @@
 export default function FeaturesGrid({ features }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 bg-gsa-white/10 gap-[1px]">
+    <div className="grid grid-cols-1 md:grid-cols-3 bg-gsa-white/10 gap-px">
       {features.map((feat, i) => (
         <div
           key={i}

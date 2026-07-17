@@ -1,6 +1,6 @@
 export default function Slogan({ sloganBgWord, slogan }) {
   return (
-    <div className="py-10 border-b border-gsa-white/30 relative overflow-hidden max-w-4xl mx-auto px-3 w-[95%]">
+    <div className="py-10 border-b border-gsa-white/30 relative overflow-hidden">
       {sloganBgWord && (
         <span
           aria-hidden="true"

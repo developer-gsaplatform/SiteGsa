@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 export default function WhyNeed({ whyNeed }) {
   const { t } = useTranslation();
   return (
-    <div className="px-[5%] md:px-0 max-w-4xl mx-auto py-14">
+    <div className="py-14">
       <div className="flex items-center gap-3 mb-4">
         <div
           className="w-2 h-2 border border-gsa-purple-soft"

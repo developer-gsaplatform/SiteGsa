@@ -81,25 +81,28 @@ export default function Project() {
     <article className="relative bg-gsa-black text-gsa-white">
       <Hero id={id} background={background} project={project} tag={tag} />
       <Ticker items={tickerItems} />
-      <MainContent id={id} whatDo={whatDo} tag={tag} desc={desc} />
+      <main className="max-w-5xl mx-auto w-[90%] md:px-16">
+        <MainContent id={id} whatDo={whatDo} tag={tag} desc={desc} />
 
-      {features?.length > 0 && (
-        <div className="py-14 border-b border-gsa-white/30 max-w-4xl mx-auto w-[95%]">
-          <div className="flex items-baseline justify-between mb-6 md:p-0 px-3">
-            <span className=" text-[12px] tracking-[0.2em] uppercase text-gsa-gray">
-              {t("projects.capabilities")}
-            </span>
-            <span className="text-[12px] tracking-[0.2em] text-gsa-gray">
-              {String(features.length).padStart(2, "0")} {t("projects.modules")}
-            </span>
+        {features?.length > 0 && (
+          <div className="py-14 border-b border-gsa-white/30">
+            <div className="flex items-baseline justify-between mb-6 md:p-0 px-3">
+              <span className=" text-[12px] tracking-[0.2em] uppercase text-gsa-gray">
+                {t("projects.capabilities")}
+              </span>
+              <span className="text-[12px] tracking-[0.2em] text-gsa-gray">
+                {String(features.length).padStart(2, "0")}{" "}
+                {t("projects.modules")}
+              </span>
+            </div>
+            <FeaturesGrid features={features} />
           </div>
-          <FeaturesGrid features={features} />
-        </div>
-      )}
+        )}
 
-      {whyNeed?.length > 0 && <WhyNeed whyNeed={whyNeed} />}
-      {slogan && <Slogan slogan={slogan} sloganBgWord={sloganBgWord} />}
-      <CTA website={website} id={id} />
+        {whyNeed?.length > 0 && <WhyNeed whyNeed={whyNeed} />}
+        {slogan && <Slogan slogan={slogan} sloganBgWord={sloganBgWord} />}
+        <CTA website={website} id={id} />
+      </main>
     </article>
   );
 }
