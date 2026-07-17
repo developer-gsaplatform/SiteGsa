@@ -31,7 +31,10 @@ const CoverflowCard = memo(function CoverflowCard({
 
   return (
     <div
-      onClick={onClick}
+      onClick={(e) => {
+        e.preventDefault();
+        isActive ? navigate(`/project/${item.slug}`) : onClick();
+      }}
       role={isActive ? "group" : "button"}
       aria-label={
         isActive
@@ -45,7 +48,7 @@ const CoverflowCard = memo(function CoverflowCard({
           onClick();
         }
       }}
-      className="select-none outline-none group"
+      className="select-none outline-none group cursor-pointer"
       style={{
         position: "absolute",
         width: cardWidth,
@@ -62,7 +65,7 @@ const CoverflowCard = memo(function CoverflowCard({
     >
       {/* ── Imagem ── */}
       <div
-        className="relative overflow-hidden border-4 border-white"
+        className="relative overflow-hidden"
         style={{
           height: cardHeight,
           border: isActive
@@ -106,10 +109,6 @@ const CoverflowCard = memo(function CoverflowCard({
         {/* Purple Overlay on Hover (only for active card) */}
         {isActive && (
           <div
-            onClick={(e) => {
-              e.stopPropagation();
-              navigate(`/project/${item.slug}`);
-            }}
             className="absolute inset-0 cursor-pointer bg-gradient-to-t from-[#3e1d63]/90 to-[#5e2d91]/75 backdrop-blur-xs flex items-center justify-center 
                        translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 
                        transition-all duration-500 ease-linear"
@@ -122,9 +121,6 @@ const CoverflowCard = memo(function CoverflowCard({
                          hover:text-gsa-purple-soft hover:border-gsa-purple-soft/35
                          transition-all duration-500 ease-out overflow-hidden
                          focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gsa-purple-soft/40"
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
             >
               <span className="relative z-10">
                 {t("projects.visitPlatform")}

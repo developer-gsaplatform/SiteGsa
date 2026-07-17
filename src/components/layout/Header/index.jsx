@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav";
 import LanguageSelect from "./LanguageSelect";
 
 const languages = [
-  { code: "pt", label: "Português", short: "PT", flag: "🇵🇹" },
+  { code: "pt", label: "Português", short: "AO", flag: "🇦🇴" },
   { code: "en", label: "English", short: "EN", flag: "🇬🇧" },
 ];
 

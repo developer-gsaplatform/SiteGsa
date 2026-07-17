@@ -8,8 +8,6 @@ export default function Metrics() {
   const metricsData = useMemo(() => {
     return t("metrics", { returnObjects: true }) || [];
   }, [t]);
-
-  console.log("metrics tranalated", metricsData);
   return (
     <section
       id="numeros"

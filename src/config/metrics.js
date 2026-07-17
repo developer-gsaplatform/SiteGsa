@@ -21,7 +21,6 @@ export const metrics = {
 };
 
 export const metricsData = Object.values(metrics);
-console.log(metricsData)
 
 export const containerVariants = {
   hidden: {

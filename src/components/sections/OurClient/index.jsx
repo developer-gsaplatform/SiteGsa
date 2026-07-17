@@ -185,7 +185,6 @@ export default function OurClients() {
       />
 
       <ScrollReveal variant="fadeUp" delay={0.1} className="w-full">
-        {console.log("items dos clientes", clientsData.items)}
         <ClientCarousel items={clientsData.items} />
       </ScrollReveal>
     </section>

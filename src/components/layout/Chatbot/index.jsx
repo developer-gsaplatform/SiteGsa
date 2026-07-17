@@ -19,7 +19,6 @@ export default function AssistenteGSA() {
   }, [messages, isTyping]);
 
   const welcomeMessage = useMemo(() => t("chatbot.welcomeMessage"), [t]);
-
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       setTimeout(() => {
@@ -114,8 +113,8 @@ export default function AssistenteGSA() {
       >
         <div className="bg-[rgba(94,45,145,0.12)] p-[14px_16px] border-b border-dashed border-gsa-gray-2 flex justify-between items-center">
           <div className="flex items-center gap-[10px]">
-            <div className="w-8 h-8 flex items-center justify-center text-[#9B7BC4]">
-              <Bot size={28} strokeWidth={1.5} />
+            <div className="w-9 h-9 flex items-center justify-center text-[#9B7BC4]">
+              <img src="/icon-white.png"/>
             </div>
             <div>
               <h4 className="text-[0.9rem] font-extrabold m-0  uppercase tracking-[0.04em] text-[#f5f5f0]">

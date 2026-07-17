@@ -1,8 +1,166 @@
 {
-  "hash": "b76965e1",
-  "configHash": "e313049d",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "2fbbf43d",
-  "optimized": {},
-  "chunks": {}
+  "hash": "9ae33c0c",
+  "configHash": "9329f891",
+  "lockfileHash": "cb6aaa85",
+  "browserHash": "9fea739b",
+  "optimized": {
+    "@fortawesome/free-brands-svg-icons": {
+      "src": "../../node_modules/@fortawesome/free-brands-svg-icons/index.mjs",
+      "file": "@fortawesome_free-brands-svg-icons.js",
+      "fileHash": "57667e13",
+      "needsInterop": false
+    },
+    "@fortawesome/react-fontawesome": {
+      "src": "../../node_modules/@fortawesome/react-fontawesome/dist/index.js",
+      "file": "@fortawesome_react-fontawesome.js",
+      "fileHash": "d7c1f080",
+      "needsInterop": false
+    },
+    "@hookform/resolvers/zod": {
+      "src": "../../node_modules/@hookform/resolvers/zod/dist/zod.mjs",
+      "file": "@hookform_resolvers_zod.js",
+      "fileHash": "34e4ceb7",
+      "needsInterop": false
+    },
+    "@tsparticles/react": {
+      "src": "../../node_modules/@tsparticles/react/index.js",
+      "file": "@tsparticles_react.js",
+      "fileHash": "0c03e868",
+      "needsInterop": false
+    },
+    "@tsparticles/slim": {
+      "src": "../../node_modules/@tsparticles/slim/browser/index.js",
+      "file": "@tsparticles_slim.js",
+      "fileHash": "de46c5eb",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "fe3e532d",
+      "needsInterop": false
+    },
+    "i18next": {
+      "src": "../../node_modules/i18next/dist/esm/i18next.js",
+      "file": "i18next.js",
+      "fileHash": "0884688d",
+      "needsInterop": false
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.mjs",
+      "file": "lucide-react.js",
+      "fileHash": "6f9ebd9b",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "8c519c6c",
+      "needsInterop": true
+    },
+    "react-hook-form": {
+      "src": "../../node_modules/react-hook-form/dist/index.esm.mjs",
+      "file": "react-hook-form.js",
+      "fileHash": "18e69d53",
+      "needsInterop": false
+    },
+    "react-i18next": {
+      "src": "../../node_modules/react-i18next/dist/es/index.js",
+      "file": "react-i18next.js",
+      "fileHash": "4bcbc55b",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "7944c91a",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "9c8c964d",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "aafbdc72",
+      "needsInterop": true
+    },
+    "sonner": {
+      "src": "../../node_modules/sonner/dist/index.mjs",
+      "file": "sonner.js",
+      "fileHash": "84b3009a",
+      "needsInterop": false
+    },
+    "zod": {
+      "src": "../../node_modules/zod/index.js",
+      "file": "zod.js",
+      "fileHash": "62e2608b",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "BlendPluginInstance-Dz73RLHr": {
+      "file": "BlendPluginInstance-Dz73RLHr.js",
+      "isDynamicEntry": true
+    },
+    "ColorUtils-BUGUpma9": {
+      "file": "ColorUtils-BUGUpma9.js",
+      "isDynamicEntry": false
+    },
+    "Container-DnZiIWXf": {
+      "file": "Container-DnZiIWXf.js",
+      "isDynamicEntry": true
+    },
+    "ImagePreloaderInstance-Bkwxayr5": {
+      "file": "ImagePreloaderInstance-Bkwxayr5.js",
+      "isDynamicEntry": true
+    },
+    "InteractivityConstants-DT7Ai0Wa": {
+      "file": "InteractivityConstants-DT7Ai0Wa.js",
+      "isDynamicEntry": false
+    },
+    "InteractivityPluginInstance-DccAQmge": {
+      "file": "InteractivityPluginInstance-DccAQmge.js",
+      "isDynamicEntry": true
+    },
+    "LinkInstance-K6LbvGPu": {
+      "file": "LinkInstance-K6LbvGPu.js",
+      "isDynamicEntry": true
+    },
+    "MovePluginInstance-CkAd84Fj": {
+      "file": "MovePluginInstance-CkAd84Fj.js",
+      "isDynamicEntry": true
+    },
+    "OverlapPluginInstance--v6ZlLGO": {
+      "file": "OverlapPluginInstance--v6ZlLGO.js",
+      "isDynamicEntry": true
+    },
+    "RotateDirection-D96AavKe": {
+      "file": "RotateDirection-D96AavKe.js",
+      "isDynamicEntry": false
+    },
+    "browser-C-1npCGD": {
+      "file": "browser-C-1npCGD.js",
+      "isDynamicEntry": false
+    },
+    "core-B-oL8TD4": {
+      "file": "core-B-oL8TD4.js",
+      "isDynamicEntry": false
+    },
+    "jsx-runtime-CI9SIyBu": {
+      "file": "jsx-runtime-CI9SIyBu.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-DqDThkcF": {
+      "file": "react-dom-DqDThkcF.js",
+      "isDynamicEntry": false
+    },
+    "rolldown-runtime-B-1-B7_t": {
+      "file": "rolldown-runtime-B-1-B7_t.js",
+      "isDynamicEntry": false
+    }
+  }
 }

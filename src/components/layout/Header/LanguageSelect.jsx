@@ -4,7 +4,7 @@ import { ChevronDown, Check } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const languages = [
-  { code: "pt", label: "Português", short: "PT", flag: "🇵🇹" },
+  { code: "pt", label: "Português", short: "AO", flag: "🇦🇴" },
   { code: "en", label: "English", short: "EN", flag: "🇬🇧" },
 ];
 
@@ -16,7 +16,10 @@ export default function LanguageSelect() {
   // Close dropdown on click outside
   useEffect(() => {
     function handleClickOutside(event) {
-      if (containerRef.current && !containerRef.current.contains(event.target)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
         setIsOpen(false);
       }
     }
@@ -24,7 +27,8 @@ export default function LanguageSelect() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const currentLang = languages.find((l) => l.code === language) || languages[0];
+  const currentLang =
+    languages.find((l) => l.code === language) || languages[0];
 
   const handleSelect = (code) => {
     setLanguage(code);
@@ -32,7 +36,10 @@ export default function LanguageSelect() {
   };
 
   return (
-    <div ref={containerRef} className="relative inline-block text-left font-semi">
+    <div
+      ref={containerRef}
+      className="relative inline-block text-left font-semi"
+    >
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
