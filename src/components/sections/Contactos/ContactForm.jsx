@@ -59,10 +59,10 @@ export default function ContactForm() {
   async function onSubmit(values) {
     const toastId = toast.loading(t("contact.toasts.preparing"));
     try {
-      const emailRecipient = "edson.2m.caolo@gmail.com";
+      const emailRecipient = "geral@gsaplatform.co";
       const subjectText = `[GSA Platform] - ${values.topic}`;
       const bodyText =
-        `Olá GSAPlatform mail gestor,\n\n` +
+        `Olá GSAPlatform,\n\n` +
         `Recebeu uma nova mensagem do formulário de contactos do GSA Platform:\n\n` +
         `-----------------------------------------\n` +
         `Nome completo: ${values.name}\n` +
@@ -72,7 +72,7 @@ export default function ContactForm() {
         `-----------------------------------------\n\n` +
         `Mensagem:\n${values.message}\n\n` +
         `Atentamente,\n` +
-        `GSA Platform Mailer`;
+        `${values.name}`;
 
       const mailtoUrl = `mailto:${emailRecipient}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
 
