@@ -58,34 +58,21 @@ export default function Hero() {
       />
 
       <div className="relative z-20 w-full max-w-7xl mx-auto px-[5%] flex items-center">
-        <div className="grid md:grid-cols-12 gap-10 items-center">
-          <div className="md:col-span-7">
+        <div className="grid md:grid-cols-12  gap-10 items-center">
+          <div className="md:col-span-7 ">
             <ScrollReveal variant="fadeUp">
               <ContentLeft heroData={heroData} />
             </ScrollReveal>
           </div>
 
-          <div className="md:col-span-5 flex items-center justify-center">
+          <div className="md:col-span-5  flex items-center justify-center">
             <AnimatedWrapper variant="fadeUp" delay={0.15}>
-              <div className="relative">
-                <div
-                  className="absolute inset-[-24px] border border-dashed border-gsa-purple-soft/[0.07] rounded-full"
-                  style={{ animation: "heroOrbit .2s linear infinite" }}
-                />
-                <div
-                  className="absolute inset-[-10px] border border-gsa-purple-soft/[0.1] rounded-full"
-                  style={{
-                    animation: "heroOrbit .2s linear infinite reverse",
-                  }}
-                />
+              
                 <img
                   src="/icon.png"
                   alt="GSA"
-                  width={600}
-                  height={600}
-                  className="relative z-10 w-full h-auto object-contain drop-shadow-[0_0_50px_rgba(155,123,196,0.2)]"
+                  className=  " relative z-10 object-contain drop-shadow-[0_0_50px_rgba(155,123,196,0.2)]"
                 />
-              </div>
             </AnimatedWrapper>
           </div>
         </div>
