@@ -99,7 +99,7 @@ export default function Footer() {
             GSAPlatform · Luanda, AO
           </span>
           <span className="uppercase tracking-[0.3em] text-gsa-gray-5/70 text-[12px]">
-            <Link onClick={() => setPrivacyOpen(true)}>
+            <Link to="/privacidade">
                 Política de Privacidade
             </Link> © {new Date().getFullYear()}
           </span>
