@@ -6,6 +6,7 @@ import {
   faTwitter,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const SOCIALS = [
   { icon: faLinkedinIn, href: "/#", label: "LinkedIn" },
@@ -98,7 +99,9 @@ export default function Footer() {
             GSAPlatform · Luanda, AO
           </span>
           <span className="uppercase tracking-[0.3em] text-gsa-gray-5/70 text-[12px]">
-            © {new Date().getFullYear()}
+            <Link onClick={() => setPrivacyOpen(true)}>
+                Política de Privacidade
+            </Link> © {new Date().getFullYear()}
           </span>
         </div>
       </div>
