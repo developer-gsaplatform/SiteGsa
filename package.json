@@ -23,6 +23,7 @@
     "jquery": "^4.0.0",
     "lucide-react": "^1.21.0",
     "materialize": "^1.0.0",
+    "materialize-css": "^1.0.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-hook-form": "^7.80.0",

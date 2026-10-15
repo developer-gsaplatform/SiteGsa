@@ -1,4 +1,7 @@
-function privacidade (){
-    <h3>Política de Privacidade</h3>
+function privacidade() {
+
+    return (
+        <h1>Política de Privacidade</h1>
+    );
 }
 export default privacidade;
