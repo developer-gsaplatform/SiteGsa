@@ -193,3 +193,28 @@
 *, *::before, *::after {
   border-radius: 0px !important;
 }
+/* Adicionar a animação no Tailwind CSS
+Para que o modal apareça suavemente, acrescenta esta classe ao ficheiro src/index.css. */
+
+
+@keyframes privacyModalEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.privacy-modal-enter {
+  animation: privacyModalEnter 220ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .privacy-modal-enter {
+    animation: none;
+  }
+}
